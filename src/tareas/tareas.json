@@ -1,0 +1,21 @@
+[
+    {
+        "id":0,
+        "titulo":"Tarea 1",
+        "descripcion":"Inicializar proyecto",
+        "hecho":true
+    },
+    {
+        "id":1,
+        "titulo":"Tarea 2",
+        "descripcion":"Subir a repositorio",
+        "hecho":true
+    },
+    {
+        "id":2,
+        "titulo":"Tarea 3",
+        "descripcion":"Realizar commit",
+        "hecho":true
+    }
+
+]

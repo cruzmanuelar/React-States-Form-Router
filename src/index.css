@@ -1,0 +1,18 @@
+*{
+    margin:0px;
+    padding:5px;
+    font-family:Arial;
+}
+
+#root{
+    margin: 2px;
+    padding: 2px;
+}
+
+p,input, button{
+    margin: 8px;
+}
+
+button,input{
+    padding: 1px 4px;
+}
