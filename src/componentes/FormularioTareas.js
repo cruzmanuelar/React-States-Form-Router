@@ -8,13 +8,12 @@ class FormularioTareas extends React.Component{
     }
 
     onSubmit = (e) => {
-        console.log(this.state);
         e.preventDefault();
+        this.props.agregarTarea(this.state.titulo,this.state.descripcion);
 
     }
 
     onChange = (e) =>{
-        console.log(e.target.name,e.target.value);
         this.setState({
             [e.target.name] : e.target.value
         })

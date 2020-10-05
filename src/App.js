@@ -8,14 +8,21 @@ class App extends React.Component{
 
   state = { tareas : tareas}
 
-  agregarTareas = () => {
-    console.log("Agregando una tarea");
+  agregarTareas = (titulo, descripcion) => {
+    const nuevaTarea = {
+      titulo:titulo,
+      descripcion:descripcion,
+      id:45
+    }
+    this.setState({
+      tareas: [...tareas,nuevaTarea]
+    })
   }
 
   render(){
     return(
       <div>
-        <FormularioTareas/>
+        <FormularioTareas agregarTarea={this.agregarTareas}/>
         <Tareas tareas={this.state.tareas}/>
       </div>
     );
