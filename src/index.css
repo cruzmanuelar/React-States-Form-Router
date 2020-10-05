@@ -9,7 +9,7 @@
     padding: 2px;
 }
 
-p,input, button{
+p,input, button,textarea{
     margin: 8px;
     padding:10px;
 }
