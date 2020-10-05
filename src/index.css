@@ -11,6 +11,7 @@
 
 p,input, button{
     margin: 8px;
+    padding:10px;
 }
 
 button,input{
