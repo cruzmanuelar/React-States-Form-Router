@@ -21,8 +21,8 @@ class Tarea extends React.Component{
             <p style={this.estiloTarea()}>
                 {tarea.id} - 
                 {tarea.titulo} : {tarea.descripcion}
-                <input type="checkbox"/>
-                <button style={btnElimnar}>X</button>
+                <input type="checkbox" onChange={this.props.checkTarea.bind(this,tarea.id)}/>
+                <button style={btnElimnar} onClick={this.props.eliminarTarea.bind(this,tarea.id)}>X</button>
             </p>
         )
     }

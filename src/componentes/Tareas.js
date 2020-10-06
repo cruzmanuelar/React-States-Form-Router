@@ -6,7 +6,7 @@ class Tareas extends React.Component{
     render(){
         return(
             this.props.tareas.map(tarea => 
-                <Tarea tarea={tarea} key={tarea.id}/>
+                <Tarea tarea={tarea} key={tarea.id} eliminarTarea={this.props.eliminarTarea} checkTarea={this.props.checkTarea}/>
             )
                 
         )
