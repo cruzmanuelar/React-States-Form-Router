@@ -41,8 +41,9 @@ class App extends React.Component{
     return(
       <div>
         <Router>
-          <Link>Home</Link>
-          <Link>Posts</Link>
+          <Link to="/">Home</Link>
+          <br/>
+          <Link to="/post">Posts</Link>
           <Route exact path="/" render={()=>{
             return <div>
               <FormularioTareas agregarTarea={this.agregarTareas}/>
