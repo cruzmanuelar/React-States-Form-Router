@@ -1,4 +1,6 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 class FormularioTareas extends React.Component{
 
@@ -10,6 +12,10 @@ class FormularioTareas extends React.Component{
     onSubmit = (e) => {
         e.preventDefault();
         this.props.agregarTarea(this.state.titulo,this.state.descripcion);
+        this.setState({
+            titulo:"",
+            descripcion:""
+        })
 
     }
 
@@ -23,18 +29,21 @@ class FormularioTareas extends React.Component{
     render(){
         return(
             <form onSubmit={this.onSubmit}>
-                <input type="text" 
-                    name="titulo"
-                    placeholder="Escribe una tarea"
-                    onChange={this.onChange} value={this.state.titulo}/>
-                    <br/>
-
-                <textarea placeholder="Escribe una descripcion" 
+                <Form.Control type="text"
+                className="my-2"
+                placeholder="Tarea"
+                name="titulo"
+                onChange={this.onChange} value={this.state.titulo}
+                />
+                <Form.Control
+                className="my-2"
+                as="textarea"
                 name="descripcion"
-                onChange={this.onChange} value={this.state.descripcion}>
-                </textarea>
-                <br/>
-                <input value="Agregar" type="submit"/>
+                rows="1"
+                placeholder="Descripcion"
+                onChange={this.onChange} value={this.state.descripcion}
+                />
+                <Button value="Agregar" variant="success" type="submit">Agregar</Button>
             </form>
         )
     }

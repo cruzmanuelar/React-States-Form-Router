@@ -5,6 +5,7 @@ import Tareas from './componentes/Tareas';
 import FormularioTareas from './componentes/FormularioTareas';
 import Post from './componentes/Post';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component{
 
@@ -14,6 +15,7 @@ class App extends React.Component{
     const nuevaTarea = {
       titulo:titulo,
       descripcion:descripcion,
+      hecho:true,
       id:this.state.tareas.length
     }
     this.setState({
