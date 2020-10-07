@@ -34,6 +34,7 @@ class FormularioTareas extends React.Component{
                 placeholder="Tarea"
                 name="titulo"
                 onChange={this.onChange} value={this.state.titulo}
+                required
                 />
                 <Form.Control
                 className="my-2"
@@ -42,6 +43,7 @@ class FormularioTareas extends React.Component{
                 rows="1"
                 placeholder="Descripcion"
                 onChange={this.onChange} value={this.state.descripcion}
+                required
                 />
                 <Button value="Agregar" variant="success" type="submit">Agregar</Button>
             </form>
