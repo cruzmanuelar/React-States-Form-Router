@@ -6,12 +6,13 @@ class Tarea extends React.Component{
 
     estiloTarea(){
         return {
-            fontSize:'18px',
-            color: this.props.tarea.hecho ? 'black' : 'gray',
+            fontSize:'20px',
+            color: this.props.tarea.hecho ? 'black' : 'white',
             textDecoration: this.props.tarea.hecho ? 'none' : 'line-through ',
             backgroundColor:'',
             margin:'0px',
-            padding:'0px'
+            padding:'0px',
+            fontFamily: 'Varela Round'
         }
     }
 

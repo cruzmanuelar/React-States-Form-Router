@@ -6,6 +6,7 @@ import FormularioTareas from './componentes/FormularioTareas';
 import Post from './componentes/Post';
 import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import NumeroTareas from './componentes/NumeroTareas';
 
 class App extends React.Component{
 
@@ -43,9 +44,9 @@ class App extends React.Component{
     return(
       <div>
         <Router>
-          <Link to="/">Home</Link>
-          <br/>
-          <Link to="/post">Posts</Link>
+          <Link style={enlaceTarea} to="/">Tareas</Link>
+          <NumeroTareas numTareas={this.state.tareas.length}/>
+          <Link style={enlacePost} to="/post">Posts</Link>
           <Route exact path="/" render={()=>{
             return <div>
               <FormularioTareas agregarTarea={this.agregarTareas}/>
@@ -60,5 +61,23 @@ class App extends React.Component{
     );
   }
 }
+
+const enlaceTarea = {
+  color:'white',
+  textDecoration:'none',
+  marginLeft:'6px',
+  marginRight:'0px',
+  display:'inline',
+  padding:'5px'
+}
+
+const enlacePost = {
+  color:'white',
+  textDecoration:'none',
+  margin:'6px',
+  display:'inline',
+  padding:'5px'
+}
+
 
 export default App;
